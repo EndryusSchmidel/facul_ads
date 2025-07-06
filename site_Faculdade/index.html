@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio pessoal (CV online)</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Menu de navegação -->
+        <div class="menu">
+            <button onclick="mostrar('sobre')">Sobre mim</button>
+            <button onclick="mostrar('formacao')">Formação</button>
+            <button onclick="mostrar('portfolio')">Portfólio</button>
+            <button onclick="mostrar('contato')">Contato</button>
+        </div>
+
+        <!-- Área que troca o conteúdo -->
+        <div class="conteudo" id="conteudo">
+            <p>Escolha um link acima para visualizar o conteúdo.</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para trocar o conteúdo sem recarregar a página
+        function mostrar(secao) {
+            const conteudo = document.getElementById("conteudo");
+            if (secao === 'sobre') {
+                conteudo.innerHTML = `<p>Oi, meu nome é Endryus, gosto de programar, assistir animes e jogar.</p>`;
+            } else if (secao === 'formacao') {
+                conteudo.innerHTML = `<p>Sou estudante de Tecnologia (ADS). Falo português e inglês intermediário.</p>`;
+} else if (secao === 'portfolio') {
+        conteudo.innerHTML = `
+        <div>
+            <h2>Meu Portfólio:</h2>
+            <ul>
+                <li><a href="https://endryusschmidel.github.io/html-css/website/index.html" target="_blank">Site</a></li>
+                <li><a href="https://endryusschmidel.github.io/projeto-cordel/index.html" target="_blank">Projeto</a></li>
+            </ul>
+        </div>
+        `;
+            } else if (secao === 'contato') {
+                conteudo.innerHTML = `
+                    <form>
+                        <label>Nome: <input type="text" name="nome" required></label>
+                        <label>Email: <input type="email" name="email" required></label>
+                        <label>Mensagem:<br> <textarea name="mensagem" required></textarea></label>
+                        <button type="submit">Enviar</button>
+                    </form>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
