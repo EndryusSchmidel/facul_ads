@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Menu de navegação -->
+        <!-- menu de navegação -->
         <div class="menu">
             <button onclick="mostrar('sobre')">Sobre mim</button>
             <button onclick="mostrar('formacao')">Formação</button>
@@ -16,14 +16,14 @@
             <button onclick="mostrar('contato')">Contato</button>
         </div>
 
-        <!-- Área que troca o conteúdo -->
+        <!-- área que troca o conteúdo -->
         <div class="conteudo" id="conteudo">
             <p>Escolha um link acima para visualizar o conteúdo.</p>
         </div>
     </div>
 
     <script>
-        // Função para trocar o conteúdo sem recarregar a página
+        // trocar o conteúdo sem reload
         function mostrar(secao) {
             const conteudo = document.getElementById("conteudo");
             if (secao === 'sobre') {
